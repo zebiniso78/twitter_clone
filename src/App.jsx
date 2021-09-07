@@ -8,8 +8,10 @@ function App() {
 
  return<> 
 
+    <div className="container">
     <LeftSidebar />
     <Main />
+    </div>
 
  </>;
  
