@@ -1,7 +1,7 @@
 function ThreeDots() {
     return(
         <svg
-        className="threeDots" 
+        className="threeDots right-sidebar__more-icon" 
         width="17" 
         height="4" 
         fill="none" 

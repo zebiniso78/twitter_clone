@@ -196,7 +196,7 @@ function Main() {
                             <img
                             className="posts-user__share" 
                             src={SharedPhoto} 
-                            alt="User shared photo"  />
+                            alt="User shared post"  />
                             <ul className="reaction__list">
                                 <li className="reaction__item">
                                     <button className="reaction__button">
