@@ -1,0 +1,110 @@
+.navbar {
+    width: 100%;
+    max-width: 268px;
+    margin-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    padding-top: 31px;
+    border-right: 1px solid #c5c5c5;
+}
+
+.logo__image {
+    width: 40px;
+    height: 33px;
+    margin-bottom: 48px;
+}
+
+.navbar__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    text-decoration: none;
+    transition: 0.5s;
+
+    .navbar__link:hover .nav__link-paragraph {
+        font-weight: bold;
+        
+    }
+}
+
+.nav__link-paragraph {
+    margin-left: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-family: sans-serif;
+
+    :hover {
+        font-weight: bold;
+
+    }
+    
+}
+
+.leftsidebar__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 230px;
+    height: 55px;
+    margin-bottom: 260px;
+    background-color: #1D9BF0;
+    color: #fff;
+    border: none;
+    border-radius: 27.5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+
+.user__div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user__div-img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-info {
+    margin-left: 10px;
+}
+
+.user__name {
+    margin: 0;
+    margin-bottom: 2px;
+    padding: 0;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.user__email {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    opacity: 0.6;
+}
+
+.threeDots {
+    margin-left: 42px;
+}
