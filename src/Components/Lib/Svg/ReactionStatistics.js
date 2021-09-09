@@ -1,6 +1,7 @@
 function ReactionStatistics() {
     return(
-        <svg 
+        <svg
+        className="statistics" 
         width="24" 
         height="24" 
         fill="none" 

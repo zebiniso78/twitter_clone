@@ -1,5 +1,5 @@
 .right-sidebar {
-    width: 100%;
+    width: 30%;
     max-width: 421px;
     padding: 20px;
     padding-left: 28px;
@@ -141,7 +141,7 @@
 
 .right-sidebar__followers {
     width: 100%;
-    max-width: 373px;
+    width: 373px;
     height: 295px;
     padding: 20px;
     background-color: #F7F9F9;
@@ -212,15 +212,62 @@
     color: #fff;
 }
 
-.additional-info {
+.right-sidebar__list {
     width: 100%;
-    max-width: 373px;
+    width: 373px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
-.additional {
-    width: 100%;
-    max-width: 115px;
-    margin-right: 10px;
+.right-sidebar__item {
+    width: 30%;
+}
+
+.right-sidebar__link {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #536471;
+    border-bottom: 1.5px solid #fff;
+    transition: 0.5s;
+
+    &:hover {
+        border-bottom: 1.5px solid #536471;
+    }
+}
+
+.right-sidebar__button {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #536471;
+    background-color: #fff;
+    border: none;
+    transition: 0.5s; 
+}
+
+.right-sidebar__button:active .right-sidebar__dropdown-list {
+    display: block;
+}
+
+.right-sidebar__paragraph {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #536471;
+}
+
+.right-sidebar__dropdown-list {
+    display: none;
 }

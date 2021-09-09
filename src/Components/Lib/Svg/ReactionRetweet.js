@@ -1,6 +1,7 @@
 function ReactionRetweet() {
     return(
         <svg 
+        className="retweet"
         width="24" 
         height="24" 
         fill="none" 

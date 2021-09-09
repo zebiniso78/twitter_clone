@@ -1,6 +1,7 @@
 function ReactionLike() {
     return(
         <svg 
+        className="like"
         width="24" 
         height="24" 
         fill="none" 

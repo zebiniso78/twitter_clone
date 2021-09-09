@@ -95,7 +95,7 @@ function Main() {
                         alt="User Profile" />
 
                         <div className="posts-info">
-                            <h2 className="posts-user-name">Designsta <span className="posts-user__span">@inner ~ 25 min</span></h2>
+                            <h2 className="posts-user-name">Designsta <span className="posts-user__span">@inner · 25 min</span></h2>
                             <p className="posts-user-comment">Twitterdagi ayol-erkak qarama-qarshiliginglardan o'zinglar zerikmadinglarmi?</p>
                             <ul className="reaction__list">
                                 <li className="reaction__item">
@@ -147,7 +147,7 @@ function Main() {
                             <p className="posts-user-comment">YPIP dasturining bu yilgi sezoni ham o’z nihoyasiga yetmoqda. Mentorlik davomida talaba va yangi bitiruvchilarni o’sayotganini ko’rib hursand bo’ladi odam.</p>
                             <ul className="reaction__list">
                                 <li className="reaction__item">
-                                    <button className="reaction__button">
+                                    <button className="reaction__button ">
                                         <Comment />
                                     </button>
                                     <span className="reaction__span"></span>
@@ -196,7 +196,9 @@ function Main() {
                             <img
                             className="posts-user__share" 
                             src={SharedPhoto} 
-                            alt="User shared post"  />
+                            alt="User shared post" 
+                            width="679"
+                            height="453" />
                             <ul className="reaction__list">
                                 <li className="reaction__item">
                                     <button className="reaction__button">
