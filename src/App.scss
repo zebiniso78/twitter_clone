@@ -15,6 +15,17 @@ body {
   color: #333333;
 }
 
+// Theme
+.dark {
+	background-color: dimgray;
+	color: wheat;
+}
+
+.light {
+	background-color: wheat;
+	color: dimgray;
+}
+
 img {
   max-width: 100%;
   height: auto;

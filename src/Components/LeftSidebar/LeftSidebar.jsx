@@ -1,5 +1,9 @@
-//Scss
-import "./LeftSidebar.scss"
+//Files
+import React from 'react';
+import "./LeftSidebar.scss";
+//import { Context } from '../../Contex/Theme';
+import {LanguageContext} from "../../Contex/Language";
+import content from "../../Localization/Content";
 
 //Images
 import Logo from "../../Assets/Images/twitter-logo.png";
@@ -16,9 +20,15 @@ import Profile from "../Lib/Svg/Profile";
 import More from "../Lib/Svg/More";
 import ThreeDots from "../Lib/Svg/ThreeDots";
 
+
+
 function LeftSidebar() {
+
+    //const { theme } = React.useContext(Context);
+    const {language} = React.useContext(LanguageContext);
+
     return(
-        <nav className="navbar">
+                <nav className="navbar">
             <img
             className="logo__image" 
             src={Logo} 
@@ -28,61 +38,61 @@ function LeftSidebar() {
                 <li className="navbar__item">
                     <a href="index.html" className="navbar__link">
                         <Home />
-                        <p className="nav__link-paragraph">Home</p>
+                        <p className="nav__link-paragraph">{content[language].home}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Explore />
-                        <p className="nav__link-paragraph">Explore</p>
+                        <p className="nav__link-paragraph">{content[language].explore}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Notifications />
-                        <p className="nav__link-paragraph">Notifications</p>
+                        <p className="nav__link-paragraph">{content[language].notif}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Messages />
-                        <p className="nav__link-paragraph">Messages</p>
+                        <p className="nav__link-paragraph">{content[language].message}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Bookmarks />
-                        <p className="nav__link-paragraph">Bookmarks</p>
+                        <p className="nav__link-paragraph">{content[language].bookmark}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Lists />
-                        <p className="nav__link-paragraph">Lists</p>
+                        <p className="nav__link-paragraph">{content[language].lists}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <Profile />
-                        <p className="nav__link-paragraph">Profile</p>
+                        <p className="nav__link-paragraph">{content[language].profile}</p>
                     </a>
                 </li>
 
                 <li className="navbar__item">
                     <a href="#link" className="navbar__link">
                         <More />
-                        <p className="nav__link-paragraph">More</p>
+                        <p className="nav__link-paragraph">{content[language].more}</p>
                     </a>
                 </li>
             </ol>
 
-            <button className="leftsidebar__button">Tweet</button>
+            <button className="leftsidebar__button">{content[language].twitter}</button>
 
             <div className="user__div">
                 <img

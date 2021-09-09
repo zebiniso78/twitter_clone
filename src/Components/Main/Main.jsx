@@ -1,5 +1,10 @@
-//Scss
+//Files
+import React from 'react';
 import './Main.scss';
+//import changeTheme from '../../Hooks/SetTheme';
+import {LanguageContext} from "../../Contex/Language";
+import content from "../../Localization/Content";
+
 
 //Icons
 import Mode from '../Lib/Svg/ChangeMode';
@@ -27,14 +32,42 @@ import SharedPhoto from "../../Assets/Images/lunch.png";
 
 
 function Main() {
+
+    //const [theme, setTheme] = changeTheme();
+    const {language, setLanguage} = React.useContext(LanguageContext);
+
     return (
         <>
             <div className="main">
                 <div className="main__top-div">
-                    <h1 className="main__top-header">Home</h1>
+                    <h1 className="main__top-header">{content[language].home}</h1>
+                    <div className="changes-wrapper">
                     <button className="mode-button">
                     <Mode />
                     </button>
+                    {/* <select
+                        className="change"
+                        value={theme}
+                        onChange={(evt) => {
+                        setTheme(evt.target.value);
+                        }}
+                    >
+                        <option value="light">light</option>
+                        <option value="dark">dark</option>
+                    </select>  */}
+
+                    <select  
+                    className="change"
+                    value={language}
+                    onChange={(evt) => {
+                        setLanguage(evt.target.value)
+                    }}
+                    >
+                        <option value="en">ENG</option>
+                        <option value="ru">RU</option>
+
+                    </select>
+                    </div>
                 </div>
 
                 <div className="new-post__div">
@@ -47,7 +80,7 @@ function Main() {
                         <input
                         className="new-post__input" 
                         type="text" 
-                        placeholder="What's happening"/>
+                        placeholder={content[language].type_here}/>
                     </div>
 
                     <div className="new-post__box">

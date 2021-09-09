@@ -1,4 +1,8 @@
+//Files
 import './RightSidebar.scss';
+import React from 'react';
+import {LanguageContext} from "../../Contex/Language";
+import content from "../../Localization/Content";
 
 //Icons
 import Search from '../Lib/Svg/Search';
@@ -10,19 +14,20 @@ import Mushtariy from '../../Assets/Images/mushtariy.png';
 import Shuhratbek from '../../Assets/Images/shuhratbek.png';
 
 function RightSidebar() {
+    const {language} = React.useContext(LanguageContext);
     return (
     <div className="right-sidebar">
 
         <div className="right-sidebar__search-input__wrapper">
             <Search />
-            <input type="text" name="search" className="right-sidebar__search-input" placeholder="Search Twitter" />
+            <input type="text" name="search" className="right-sidebar__search-input" placeholder={content[language].search} />
         </div>
         
         <div className="right-sidebar__trends"> 
 
             <div className="right-sidebar__setting__wrapper">
                 <h1 className="right-sidebar__setting-heading">
-                Trends for you
+                {content[language].trends}
                 </h1>
                 <button className="right-sidebar__setting-btn" width='24px' height='24' >
                 <Settings />
@@ -65,14 +70,14 @@ function RightSidebar() {
                 
             </div>
 
-            <button className="right-sidebar__show-more-btn">Show more</button>
+            <button className="right-sidebar__show-more-btn">{content[language].show_more}</button>
         
         </div>
 
         <div className="right-sidebar__followers">
         
             <h1 className="right-sidebar__followers-heading">
-                You might like
+            {content[language].more_news}
             </h1>
 
             <div className="right-sidebar__follower">
@@ -97,28 +102,28 @@ function RightSidebar() {
                 <button className="right-sidebar__follow-btn">Follow</button>
             </div>
 
-            <button className="right-sidebar__show-more-btn">Show more</button>
+            <button className="right-sidebar__show-more-btn">{content[language].show_more}</button>
         </div>
 
         <ul className="right-sidebar__list">
             <li className="right-sidebar__item">
-                <a href="https://twitter.com/ru/tos" className="right-sidebar__link">Terms of Service</a>
+                <a href="https://twitter.com/ru/tos" className="right-sidebar__link">{content[language].service}</a>
             </li>
 
             <li className="right-sidebar__item">
-                <a href="https://twitter.com/ru/privacy" className="right-sidebar__link">Privacy Policy</a>
+                <a href="https://twitter.com/ru/privacy" className="right-sidebar__link">{content[language].privacy}</a>
             </li>
 
             <li className="right-sidebar__item">
-                <a href="https://help.twitter.com/ru/rules-and-policies/twitter-cookies" className="right-sidebar__link">Cookie Policy</a>
+                <a href="https://help.twitter.com/ru/rules-and-policies/twitter-cookies" className="right-sidebar__link">{content[language].cookie}</a>
             </li>
 
             <li className="right-sidebar__item">
-                <a href="https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo" className="right-sidebar__link">Ads Info</a>
+                <a href="https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo" className="right-sidebar__link">{content[language].ads_info}</a>
             </li>
 
             <li className="right-sidebar__item ">
-                <button className="right-sidebar__button">More ···</button>
+                <button className="right-sidebar__button">{content[language].more} ···</button>
                 <ul className="right-sidebar__dropdown-list">
                     <li className="right-sidebar__dropdown-item">
                         <a href="https://about.twitter.com/en" className="right-sidebar__dropdown-link">About</a>
