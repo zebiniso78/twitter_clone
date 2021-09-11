@@ -1,7 +1,7 @@
 //Files
 import React from 'react';
 import './Main.scss';
-//import changeTheme from '../../Hooks/SetTheme';
+import changeTheme from '../../Hooks/SetTheme';
 import {LanguageContext} from "../../Contex/Language";
 import content from "../../Localization/Content";
 
@@ -33,28 +33,28 @@ import SharedPhoto from "../../Assets/Images/lunch.png";
 
 function Main() {
 
-    //const [theme, setTheme] = changeTheme();
+    const [theme, setTheme] = changeTheme();
     const {language, setLanguage} = React.useContext(LanguageContext);
 
     return (
         <>
-            <div className="main">
+            <div className={`main ${theme}`}>
                 <div className="main__top-div">
                     <h1 className="main__top-header">{content[language].home}</h1>
                     <div className="changes-wrapper">
                     <button className="mode-button">
-                    <Mode />
+                    <Mode className="mode-image" />
                     </button>
-                    {/* <select
+                     <select
                         className="change"
                         value={theme}
                         onChange={(evt) => {
                         setTheme(evt.target.value);
                         }}
                     >
-                        <option value="light">light</option>
-                        <option value="dark">dark</option>
-                    </select>  */}
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>  
 
                     <select  
                     className="change"
@@ -128,7 +128,8 @@ function Main() {
                         alt="User Profile" />
 
                         <div className="posts-info">
-                            <h2 className="posts-user-name">Designsta <span className="posts-user__span">@inner · 25 min</span></h2>
+                            <h2 className="posts-user-name">Designsta <span className="posts-user__span">@inner · 18{content[language
+                            ].minut}</span></h2>
                             <p className="posts-user-comment">Twitterdagi ayol-erkak qarama-qarshiliginglardan o'zinglar zerikmadinglarmi?</p>
                             <ul className="reaction__list">
                                 <li className="reaction__item">
@@ -176,7 +177,7 @@ function Main() {
                         alt="User Profile" />
 
                         <div className="posts-info">
-                            <h2 className="posts-user-name">cloutexhibition <span className="posts-user__span">@RajLahoti · 22m</span></h2>
+                            <h2 className="posts-user-name">cloutexhibition <span className="posts-user__span">@RajLahoti · 22{content[language].minut}</span></h2>
                             <p className="posts-user-comment">YPIP dasturining bu yilgi sezoni ham o’z nihoyasiga yetmoqda. Mentorlik davomida talaba va yangi bitiruvchilarni o’sayotganini ko’rib hursand bo’ladi odam.</p>
                             <ul className="reaction__list">
                                 <li className="reaction__item">
@@ -224,7 +225,7 @@ function Main() {
                         alt="User Profile" />
 
                         <div className="posts-info">
-                            <h2 className="posts-user-name">CreativePhoto <span className="posts-user__span">@cloutexhibition · 1h</span></h2>
+                            <h2 className="posts-user-name">CreativePhoto <span className="posts-user__span">@cloutexhibition · 1{content[language].hour}</span></h2>
                             <p className="posts-user-comment">Обетда..... <br />Кечиринглар</p>
                             <img
                             className="posts-user__share" 

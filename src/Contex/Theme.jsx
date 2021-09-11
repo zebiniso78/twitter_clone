@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Context = React.createContext();
+const ThemeContext = React.createContext();
 
-function Provider({ children }) {
+function ThemeProvider({ children }) {
 	const [theme, setTheme] = React.useState(
 		window.localStorage.getItem('theme') || 'light',
 	);
@@ -11,10 +11,10 @@ function Provider({ children }) {
 		window.localStorage.setItem('theme', theme);
 	}, [theme]);
 	return (
-		<Context.Provider value={{ theme, setTheme }}>
+		<ThemeContext.Provider value={{ theme, setTheme }}>
 			{children}
-		</Context.Provider>
+		</ThemeContext.Provider>
 	);
 }
 
-export { Provider, Context };
+export { ThemeProvider, ThemeContext };

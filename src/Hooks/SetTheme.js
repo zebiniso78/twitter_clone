@@ -1,8 +1,8 @@
 import React from 'react';
-import { Context } from '../Contex/Theme';
+import { ThemeContext } from '../Contex/Theme';
 
 const SetTheme = () => {
-	const ctx = React.useContext(Context);
+	const ctx = React.useContext(ThemeContext);
 
 	return [ctx.theme, ctx.setTheme];
 };

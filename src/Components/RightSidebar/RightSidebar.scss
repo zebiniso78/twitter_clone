@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.dark .right-sidebar__search-input__wrapper {
+    background-color: #253341;
+}
+
 .right-sidebar__search-input {
     border: hidden;
     font-family: sans-serif;
@@ -23,6 +27,11 @@
     line-height: 24px;
     color: #5C6C79;
     background-color: #EFF3F4;
+}
+
+.dark .right-sidebar__search-input {
+    color:#8899a6;
+    background-color: #253341;
 }
 
 .right-sidebar__search-icon {
@@ -41,6 +50,10 @@
     margin-top: 20px;
 }
 
+.dark .right-sidebar__trends {
+    background-color: #253341;
+}
+
 .right-sidebar__setting-heading {
     margin: 0;
     font-family: sans-serif;
@@ -48,6 +61,10 @@
     font-size: 24px;
     line-height: 32px;
     color: #1e1e1e;
+}
+
+.dark .right-sidebar__setting-heading {
+    color: #8899a6;
 }
 
 .right-sidebar__setting__wrapper {
@@ -64,6 +81,14 @@
     align-items: center;
     justify-content: center;
     background-color: #f7f9f9;
+}
+
+.dark .right-sidebar__setting-btn {
+    background-color: #253341;
+
+    & path {
+        fill: #1DA1F2;
+    }
 }
 
 .right-sidebar__setting-icon {
@@ -89,6 +114,10 @@
 
 }
 
+.dark .country {
+    color: #8899a6;
+}
+
 .revolution {
     font-family: sans-serif;
     font-style: normal;
@@ -97,6 +126,10 @@
     line-height: 27px;
     color: #1e1e1e;
     margin-bottom: 3px;
+}
+
+.dark .revolution {
+    color: #fff;
 }
 
 .stats {
@@ -109,6 +142,11 @@
     margin-top: 4px;
 }
 
+.dark .stats {
+    color: #8899a6;
+    opacity: 0.6;
+}
+
 .stat-number {
     font-family: sans-serif;
     font-weight: normal;
@@ -119,9 +157,22 @@
     margin-right: 4px;
 }
 
+.dark .stat-number {
+    color: #8899a6;
+    opacity: 0.6;
+}
+
 .right-sidebar__more-btn {
     border: none;
     background-color: #f7f9f9;
+}
+
+.dark .right-sidebar__more-btn {
+    background-color: #253341;
+
+    & path {
+        fill: #fff;
+    }
 }
 
 .right-sidebar__more-icon {
@@ -139,6 +190,10 @@
     background-color: #f7f9f9;
 }
 
+.dark .right-sidebar__show-more-btn {
+    background-color: #253341;
+}
+
 .right-sidebar__followers {
     width: 100%;
     width: 373px;
@@ -150,12 +205,20 @@
     margin-bottom: 30px;
 }
 
+.dark .right-sidebar__followers {
+    background-color: #253341;
+}
+
 .right-sidebar__followers-heading {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
     color: #1e1e1e;
+}
+
+.dark .right-sidebar__followers-heading {
+    color: #8899a6;
 }
 
 .right-sidebar__follower {
@@ -189,6 +252,10 @@
     margin-bottom: 1px;
 }
 
+.dark .name {
+    color: #fff;
+}
+
 .email {
     font-family: sans-serif;
     font-style: normal;
@@ -199,10 +266,16 @@
     opacity: 0.6;
 }
 
+.dark .email {
+    color: #fff;
+    opacity: 0.6;
+}
+
 .right-sidebar__follow-btn {
     width: 92px;
     height: 38px;
     background-color: #000;
+    border: none;
     border-radius: 50px;
     font-family: sans-serif;
     font-style: normal;
@@ -210,6 +283,10 @@
     font-size: 18px;
     line-height: 100%;
     color: #fff;
+}
+
+.dark .right-sidebar__follow-btn {
+    background-color: #1DA1F2;
 }
 
 .right-sidebar__list {
@@ -242,6 +319,16 @@
     }
 }
 
+.dark .right-sidebar__link {
+    color: #fff;
+    opacity: 0.6;
+    border-bottom: 1.5px solid #111;
+
+    &:hover {
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.6); 
+    }
+}
+
 .right-sidebar__button {
     text-decoration: none;
     font-family: "Roboto";
@@ -253,6 +340,12 @@
     background-color: #fff;
     border: none;
     transition: 0.5s; 
+}
+
+.dark .right-sidebar__button {
+    background-color: #111;
+    color: #fff;
+    opacity: 0.6;
 }
 
 .right-sidebar__button:active .right-sidebar__dropdown-list {

@@ -1,6 +1,6 @@
 const content = {
     en: {
-		home: "Home",
+	home: "Home",
         explore : "Explore",
         notif: "Notifications",
         message: "Messages",
@@ -10,6 +10,8 @@ const content = {
         more : "More",
         twitter: "Twitter",
         type_here: "What's happening",
+        minut: "min",
+        hour: "h",
         search: "Search Twitter",
         trends: "Trends for you",
         show_more: "Show more",
@@ -33,6 +35,8 @@ const content = {
         more : "Еще",
         twitter: "Твитнуть",
         type_here: "Что нового",
+        minut: "мин",
+        hour: "ч",
         search: "Поиск в Твиттере",
         trends: "Вам может понравиться ",
         show_more: "Показать еще",

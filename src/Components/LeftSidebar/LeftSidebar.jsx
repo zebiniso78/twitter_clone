@@ -1,7 +1,6 @@
 //Files
 import React from 'react';
 import "./LeftSidebar.scss";
-//import { Context } from '../../Contex/Theme';
 import {LanguageContext} from "../../Contex/Language";
 import content from "../../Localization/Content";
 
@@ -24,11 +23,10 @@ import ThreeDots from "../Lib/Svg/ThreeDots";
 
 function LeftSidebar() {
 
-    //const { theme } = React.useContext(Context);
     const {language} = React.useContext(LanguageContext);
 
     return(
-                <nav className="navbar">
+                <nav className='navbar'>
             <img
             className="logo__image" 
             src={Logo} 
